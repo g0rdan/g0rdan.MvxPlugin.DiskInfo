@@ -21,8 +21,6 @@
     <CodesignKey>iPhone Developer</CodesignKey>
     <MtouchDebug>true</MtouchDebug>
     <MtouchFastDev>true</MtouchFastDev>
-    <MtouchUseSGen>true</MtouchUseSGen>
-    <MtouchUseRefCounting>true</MtouchUseRefCounting>
     <MtouchLink>None</MtouchLink>
     <MtouchArch>i386</MtouchArch>
     <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
@@ -36,8 +34,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <CodesignKey>iPhone Developer</CodesignKey>
-    <MtouchUseSGen>true</MtouchUseSGen>
-    <MtouchUseRefCounting>true</MtouchUseRefCounting>
     <MtouchFloat32>true</MtouchFloat32>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
     <MtouchLink>SdkOnly</MtouchLink>
@@ -53,8 +49,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <CodesignKey>iPhone Developer</CodesignKey>
-    <MtouchUseSGen>true</MtouchUseSGen>
-    <MtouchUseRefCounting>true</MtouchUseRefCounting>
     <MtouchLink>None</MtouchLink>
     <MtouchArch>i386</MtouchArch>
     <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
@@ -73,8 +67,6 @@
     <DeviceSpecificBuild>true</DeviceSpecificBuild>
     <MtouchDebug>true</MtouchDebug>
     <MtouchFastDev>true</MtouchFastDev>
-    <MtouchUseSGen>true</MtouchUseSGen>
-    <MtouchUseRefCounting>true</MtouchUseRefCounting>
     <MtouchFloat32>true</MtouchFloat32>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
     <MtouchLink>SdkOnly</MtouchLink>
@@ -109,19 +101,17 @@
     <Reference Include="MvvmCross.Localization">
       <HintPath>..\packages\MvvmCross.Binding.4.3.0\lib\Xamarin.iOS10\MvvmCross.Localization.dll</HintPath>
     </Reference>
+    <Reference Include="g0rdan.MvvmCross.Plugin.DiskInfo">
+      <HintPath>..\packages\g0rdan.MvvmCross.Plugin.DiskInfo.1.0.10\lib\portable45-net45+win8+wpa81\g0rdan.MvvmCross.Plugin.DiskInfo.dll</HintPath>
+    </Reference>
+    <Reference Include="g0rdan.MvvmCross.Plugin.DiskInfo.iOS">
+      <HintPath>..\packages\g0rdan.MvvmCross.Plugin.DiskInfo.iOS.1.0.10\lib\xamarinios10\g0rdan.MvvmCross.Plugin.DiskInfo.iOS.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DiskInfoSample.Core\DiskInfoSample.Core.csproj">
       <Project>{6547C665-B1D8-40CC-A6BD-00D13613C762}</Project>
       <Name>DiskInfoSample.Core</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\src\iOS\g0rdan.MvvmCross.Plugin.DiskInfo.iOS.csproj">
-      <Project>{BAF5D912-7ADA-4BB5-B558-7A551A5CFD9B}</Project>
-      <Name>g0rdan.MvvmCross.Plugin.DiskInfo.iOS</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\src\Core\g0rdan.MvvmCross.Plugin.DiskInfo.Core.csproj">
-      <Project>{FB9DB656-937B-4E40-9BF5-CFB0EFF06FB2}</Project>
-      <Name>g0rdan.MvvmCross.Plugin.DiskInfo.Core</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
@@ -138,7 +128,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Views\FirstView.cs" />
     <Compile Include="Views\FirstView.designer.cs" />
-    <Compile Include="DiskInfoPluginBootstrap.cs" />
     <Compile Include="Plugin.cs" />
   </ItemGroup>
   <ItemGroup>

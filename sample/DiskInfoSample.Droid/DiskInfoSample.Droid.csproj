@@ -8,7 +8,7 @@
     <OutputType>Library</OutputType>
     <RootNamespace>DiskInfoSample.Droid</RootNamespace>
     <AssemblyName>DiskInfoSample.Droid</AssemblyName>
-    <TargetFrameworkVersion>v7.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v7.1</TargetFrameworkVersion>
     <AndroidApplication>True</AndroidApplication>
     <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
@@ -105,19 +105,18 @@
     <Reference Include="MvvmCross.Droid.Support.Design">
       <HintPath>..\packages\MvvmCross.Droid.Support.Design.4.3.0\lib\MonoAndroid403\MvvmCross.Droid.Support.Design.dll</HintPath>
     </Reference>
+    <Reference Include="g0rdan.MvvmCross.Plugin.DiskInfo">
+      <HintPath>..\packages\g0rdan.MvvmCross.Plugin.DiskInfo.1.0.10\lib\portable45-net45+win8+wpa81\g0rdan.MvvmCross.Plugin.DiskInfo.dll</HintPath>
+    </Reference>
+    <Reference Include="g0rdan.MvvmCross.Plugin.DiskInfo.Droid">
+      <HintPath>..\packages\g0rdan.MvvmCross.Plugin.DiskInfo.Droid.1.0.10\lib\monoandroid71\g0rdan.MvvmCross.Plugin.DiskInfo.Droid.dll</HintPath>
+    </Reference>
+    <Reference Include="Java.Interop" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DiskInfoSample.Core\DiskInfoSample.Core.csproj">
       <Project>{6547C665-B1D8-40CC-A6BD-00D13613C762}</Project>
       <Name>DiskInfoSample.Core</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\src\Core\g0rdan.MvvmCross.Plugin.DiskInfo.Core.csproj">
-      <Project>{FB9DB656-937B-4E40-9BF5-CFB0EFF06FB2}</Project>
-      <Name>g0rdan.MvvmCross.Plugin.DiskInfo.Core</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\src\Droid\g0rdan.MvvmCross.Plugin.DiskInfo.Droid.csproj">
-      <Project>{FF40A193-5EF8-409C-BC6A-4E8382173BA7}</Project>
-      <Name>g0rdan.MvvmCross.Plugin.DiskInfo.Droid</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

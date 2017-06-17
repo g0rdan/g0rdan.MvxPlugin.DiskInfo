@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\NuGet.Build.Packaging.0.1.248\build\NuGet.Build.Packaging.props" Condition="Exists('..\packages\NuGet.Build.Packaging.0.1.248\build\NuGet.Build.Packaging.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -9,6 +10,11 @@
     <RootNamespace>g0rdan.MvvmCross.Plugin.DiskInfo.iOS</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
     <AssemblyName>g0rdan.MvvmCross.Plugin.DiskInfo.iOS</AssemblyName>
+    <PackOnBuild>true</PackOnBuild>
+    <PackageId>g0rdan.MvvmCross.Plugin.DiskInfo.iOS</PackageId>
+    <PackageVersion>1.0.10</PackageVersion>
+    <Authors>g0rdan</Authors>
+    <Description>MvvmCross plugin for getting information about device storage</Description>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -52,11 +58,14 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
+    <Folder Include="content\" />
+    <Folder Include="content\Bootstrap\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="DiskInfoPlugin.cs" />
     <Compile Include="Plugin.cs" />
+    <Compile Include="content\Bootstrap\DiskInfoPluginBootstrap.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
@@ -68,4 +77,5 @@
       <Name>g0rdan.MvvmCross.Plugin.DiskInfo.Core</Name>
     </ProjectReference>
   </ItemGroup>
+  <Import Project="..\packages\NuGet.Build.Packaging.0.1.248\build\NuGet.Build.Packaging.targets" Condition="Exists('..\packages\NuGet.Build.Packaging.0.1.248\build\NuGet.Build.Packaging.targets')" />
 </Project>
